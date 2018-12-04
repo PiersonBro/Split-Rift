@@ -1,0 +1,28 @@
+<diagram program="umletino" version="14.3.0"><zoom_level>10</zoom_level><help_text></help_text><element><id>UMLClass</id><coordinates><x>240</x><y>328</y><w>210</w><h>190</h></coordinates><panel_attributes>Narrative
+--
+- decisions: vector&lt;Decision&gt;
+-
++ getDecisions(): vector&lt;Decision&gt;</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>30</x><y>68</y><w>210</w><h>190</h></coordinates><panel_attributes>Character
+--
+- health: Double
+- damage: Double
+- items: vector&lt;GameItem&gt;
+--
++ getHealth(): Double
++ getDamage(): Double
++ getItems(): vector&lt;GameItem&gt;
++ equipItem(item: GameItem)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>240</x><y>608</y><w>120</w><h>150</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;130;100;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>140</x><y>738</y><w>210</w><h>190</h></coordinates><panel_attributes>Weapon
+--
+damage: Double</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>380</x><y>738</y><w>210</w><h>190</h></coordinates><panel_attributes>Food
+--
+health: Double</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>350</x><y>608</y><w>140</w><h>150</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>120;130;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>290</x><y>568</y><w>120</w><h>50</h></coordinates><panel_attributes>/GameItem/
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>470</x><y>327</y><w>210</w><h>190</h></coordinates><panel_attributes>Decision
+--
+- narrative: Narrative
+-
++ getNarrative(): Narrative</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>310</x><y>67</y><w>210</w><h>190</h></coordinates><panel_attributes>Story
+--
+- string: presentationString
+--
++ getPresentationString(): string</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>330</x><y>247</y><w>100</w><h>100</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;80;80;10</additional_attributes></element><element><id>Relation</id><coordinates><x>410</x><y>247</y><w>180</w><h>100</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>160;80;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>360</x><y>618</y><w>140</w><h>150</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>120;130;10;10</additional_attributes></element></diagram>

@@ -4,10 +4,10 @@
 using namespace std;
 
 class Story {
-    private:
+    protected:
         string presentationString;
     public:
-        string getPresentationString();
+        string getPresentationString() const;
         virtual ~Story() = 0;
 };
 #endif

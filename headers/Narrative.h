@@ -3,12 +3,14 @@
 #include <string>
 #include <vector>
 #include "Decision.h"
+#include "Story.h"
 using namespace std;
 
-class Narrative {
+class Narrative: public Story {
     private:
         vector<Decision> decisions;
     public:
-        vector<Decision> getDecisions();
+        Narrative(string presentationString, vector<Decision> decisions);
+        vector<Decision> getDecisions() const;
 };
 #endif

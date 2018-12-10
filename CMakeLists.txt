@@ -4,4 +4,8 @@ project(Split-Rift)
 set(CMAKE_BUILD_TYPE Debug)
 set(CMAKE_CXX_STANDARD 11)
 include_directories(AFTER PRIVATE headers)
-add_executable(main source/main.cpp)
+file(GLOB split-rift-source 
+	"source/*.cpp"
+)
+
+add_executable(main ${split-rift-source})

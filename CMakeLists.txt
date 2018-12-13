@@ -7,5 +7,7 @@ include_directories(AFTER PRIVATE headers)
 file(GLOB split-rift-source 
 	"source/*.cpp"
 )
+file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/ForestStory.txt
+     DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 
 add_executable(main ${split-rift-source})

@@ -1,6 +1,7 @@
 #ifndef NARRATIVE_H
 #define NARRATIVE_H
 #include <string>
+#include <iostream>
 #include <vector>
 #include "Decision.h"
 #include "Story.h"
@@ -16,4 +17,6 @@ class Narrative: public Story {
         void addDecision(Decision decision);
         string getName() const;
 };
+ostream& operator<<(ostream& os, Narrative narrative);
+
 #endif

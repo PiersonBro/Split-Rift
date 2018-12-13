@@ -4,28 +4,16 @@
 #include "Narrative.h"
 #include "StoryGenerator.h"
 using namespace std;
-//FIXME: Consider using operator overloading on narrative.
-void printOutNarrative(Narrative narrative) {
-    cout << narrative.getPresentationString() << endl;
-    // I looked up the tab code on google.
-    auto decisions = narrative.getDecisions();
-    for (int i = 0; i < decisions.size(); i++) {
-        cout << "\t" << decisions[i].getPresentationString() << endl;
-    }
-    
-}
 
 int main() {
     StoryGenerator generator("ForestStory.txt");
-    
     bool firstRun = true;
     auto narratives = generator.generateNarratives();
     Narrative * currentNarrative = &narratives[0];
-    printOutNarrative(*currentNarrative);
+    cout << *currentNarrative << endl;
     string input;
     while(getline(cin, input)) {
         vector<Decision> decisions = currentNarrative->getDecisions();
-        cout << decisions.size() << endl;
         bool found = false;
         for (int i = 0; i < decisions.size(); i++) {
             if (decisions[i].getPresentationString() == input) {
@@ -40,7 +28,7 @@ int main() {
                 cout << "The end of the game has been reached. I hope you enjoyed it!" << endl;
                 break;
             } else {
-                printOutNarrative(*currentNarrative);
+                cout << *currentNarrative << endl;
             }
         }
     }

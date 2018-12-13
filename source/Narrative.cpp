@@ -16,3 +16,14 @@ void Narrative::addDecision(Decision decision) {
 string Narrative::getName() const {
     return name;
 }
+
+ostream& operator<<(ostream& os, Narrative narrative) {
+    os << narrative.getPresentationString() << endl;
+    // I looked up the tab code on google.
+    auto decisions = narrative.getDecisions();
+    for (int i = 0; i < decisions.size(); i++) {
+        os << "\t" << decisions[i].getPresentationString() << endl;
+    }
+
+    return os;
+}

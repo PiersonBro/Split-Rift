@@ -1,3 +1,9 @@
+////////////////////////////////////////////////
+// Narrative.cpp
+// Purpose: Implement the `Story` class
+// Author: Ezekiel Pierson
+// Date: 12/08/2018  Change: Created File
+////////////////////////////////////////////////
 #include "Story.h"
 
 string Story::getPresentationString() const {

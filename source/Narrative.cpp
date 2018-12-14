@@ -1,3 +1,9 @@
+////////////////////////////////////////////////
+// Narrative.cpp
+// Purpose: Implement the `Narrative` class
+// Author: Ezekiel Pierson
+// Date: 12/08/2018  Change: Created File
+////////////////////////////////////////////////
 #include "Narrative.h"
 
 Narrative::Narrative(string presentationString, vector<Decision> decisions, string name) {

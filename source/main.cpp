@@ -1,5 +1,11 @@
+////////////////////////////////////////////////
+// main.cpp
+// Purpose: The `main` function for Split-Rift
+// Author: Ezekiel Pierson
+// Date: 12/06/2018  Change: Created File
+////////////////////////////////////////////////
+
 #include <iostream>
-#include "Character.h"
 #include "Decision.h"
 #include "Narrative.h"
 #include "StoryGenerator.h"

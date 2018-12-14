@@ -1,3 +1,9 @@
+////////////////////////////////////////////////
+// StoryGenerator.cpp
+// Purpose: Implement `StoryGenerator` class
+// Author: Ezekiel Pierson
+// Date: 12/12/2018  Change: Created File
+////////////////////////////////////////////////
 #include "StoryGenerator.h"
 #include <fstream>
 #include <iostream>
@@ -52,6 +58,7 @@ vector<Narrative> StoryGenerator::generateNarratives() {
         narratives.push_back(initialNarrative);
     }
     file.close();
+    // For every narrative iterate through their predecisions, find the narrative they match up to, and add it back to the narrative.
     for (int i = 0; i < narratives.size(); i++) {
         Narrative narrative = narratives[i];
         vector<PreDecision> preDecisions = preDecisionsPerNarrative[i];

@@ -1,4 +1,4 @@
-<diagram program="umletino" version="14.3.0"><zoom_level>10</zoom_level><help_text></help_text><element><id>UMLClass</id><coordinates><x>50</x><y>261</y><w>380</w><h>190</h></coordinates><panel_attributes>Narrative 
+<diagram program="umletino" version="14.3.0"><zoom_level>10</zoom_level><help_text></help_text><element><id>UMLClass</id><coordinates><x>40</x><y>583</y><w>380</w><h>190</h></coordinates><panel_attributes>Narrative 
 --
 - decisions: vector&lt;Decision&gt;
 - name: string
@@ -6,38 +6,18 @@
 + Narrative(presentationString: string, decisions: vector&lt;Decision&gt;, name: string)
 + getDecisions(): vector&lt;Decision&gt;
 + addDecision(): void const
-+ getName(): const string</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>80</x><y>1</y><w>240</w><h>190</h></coordinates><panel_attributes>Character
---
-- health: Double
-- damage: Double
-- items: vector&lt;GameItem&gt;
---
-+ getHealth(): Double const
-+ getDamage(): Double const
-+ getItems(): vector&lt;GameItem *&gt; const
-+ equipItem(item: GameItem *)
-+ addItem(item: GameItem *)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>180</x><y>571</y><w>190</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;100;170;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>80</x><y>671</y><w>280</w><h>190</h></coordinates><panel_attributes>Weapon
---
-damage: Double
---
-Weapon(damage: Double)
-transformGameValue(value: double): double virtual</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>400</x><y>671</y><w>280</w><h>190</h></coordinates><panel_attributes>Food
---
-health: Double
---
-Food(health: Double)
-transformGameValue(value: double): double virtual</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>350</x><y>571</y><w>160</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>140;100;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>200</x><y>531</y><w>320</w><h>50</h></coordinates><panel_attributes>/GameItem/
--
-transformGameValue(value: double): double virtual</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>540</x><y>260</y><w>330</w><h>190</h></coordinates><panel_attributes>Decision
++ getName(): const string</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>510</x><y>582</y><w>330</w><h>190</h></coordinates><panel_attributes>Decision
 --
 - narrative: Narrative
 -
 + Decision(narrative: * Narrative, presentationString: string)
-+ getNarrative(): Narrative const</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>360</x><y>0</y><w>220</w><h>190</h></coordinates><panel_attributes>Story
++ getNarrative(): Narrative const
+--
++ operator&lt;&lt;(os: &amp;ostream, narrative: Narrative) : &amp;ostream</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>330</x><y>192</y><w>220</w><h>190</h></coordinates><panel_attributes>Story
 --
 - string: presentationString
 --
-+ getPresentationString(): string const</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>140</x><y>180</y><w>340</w><h>100</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;80;320;10</additional_attributes></element><element><id>Relation</id><coordinates><x>460</x><y>180</y><w>200</w><h>100</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>180;80;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>610</x><y>0</y><w>210</w><h>190</h></coordinates><panel_attributes>StoryGenerator
++ getPresentationString(): string const</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>130</x><y>372</y><w>320</w><h>230</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;210;300;10</additional_attributes></element><element><id>Relation</id><coordinates><x>430</x><y>372</y><w>200</w><h>230</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>180;210;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>80</x><y>212</y><w>210</w><h>190</h></coordinates><panel_attributes>StoryGenerator
 --
 - filename: string
 --
